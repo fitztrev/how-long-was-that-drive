@@ -13,6 +13,7 @@ $('.set_location').click(function(e){
 });
 
 function save_location(position) {
+	$('#logs').append(position.coords.latitude + ', ' + position.coords.longitude + '<br>');
 	if ( from_loc ) {
 		to_loc = position.coords;
 		calculate_distance();
