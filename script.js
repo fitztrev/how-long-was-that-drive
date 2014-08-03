@@ -36,5 +36,9 @@ function calculate_distance() {
 	var meters = getDistance(from_loc.latitude, from_loc.longitude,
 	                                  to_loc.latitude, to_loc.longitude);
 	var yards = meters * 1.09361;
-	$('#results').html(yards + ' yards (' + meters + ' meters)');
+	$('#results').html(round(yards) + ' yards (' + round(meters) + ' meters)');
+}
+
+function round(num) {
+	return Math.ceil(num * 100)/100;
 }
