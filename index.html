@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>How long was that drive? | Golf shot distance calculator</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h2 class="page-header">
+			<a class="pull-right btn btn-default" href="/">New</a>
+			How long was that drive?<br>
+			<small>A simple golf app to measure your shot distance</small>
+		</h2>
+
+		<a id="from_loc" class="set_location btn btn-lg btn-success" href="#">Set tee location</a>
+		<a id="to_loc" class="set_location btn btn-lg btn-info" href="#">Set landing location</a>
+
+		<p id="loading" class="lead">Getting location information&hellip;</p>
+		<p id="results" class="lead"></p>
+	</div>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="gps-distance/javascript/distance.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

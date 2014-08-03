@@ -1,0 +1,3 @@
+[submodule "gps-distance"]
+	path = gps-distance
+	url = https://github.com/janantala/GPS-distance.git
