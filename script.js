@@ -8,12 +8,13 @@ $('.set_location').click(function(e){
 	$(this).hide();
 
 	navigator.geolocation.getCurrentPosition(save_location, handle_error, {
-		enableHighAccuracy: true
+		enableHighAccuracy: true,
+		timeout: 30000
 	});
 });
 
 function save_location(position) {
-	$('#logs').append(position.coords.latitude + ', ' + position.coords.longitude + '<br>');
+	$('#logs').append(position.coords.latitude + ', ' + position.coords.longitude + ' (' + position.coords.accuracy + 'm)<br>');
 	if ( from_loc ) {
 		to_loc = position.coords;
 		calculate_distance();
