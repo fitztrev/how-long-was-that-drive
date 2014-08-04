@@ -14,7 +14,11 @@ $('.set_location').click(function(e){
 });
 
 function save_location(position) {
-	$('#logs').append(position.coords.latitude + ', ' + position.coords.longitude + ' (' + position.coords.accuracy + 'm)<br>');
+	// Debug geolocation results
+	$('#logs').append(
+		position.coords.latitude + ', ' + position.coords.longitude + ' (' + position.coords.accuracy + 'm accuracy)<br>'
+	);
+
 	if ( from_loc ) {
 		to_loc = position.coords;
 		calculate_distance();
@@ -35,7 +39,7 @@ function handle_error(err) {
 
 function calculate_distance() {
 	var meters = getDistance(from_loc.latitude, from_loc.longitude,
-	                                  to_loc.latitude, to_loc.longitude);
+	                         to_loc.latitude, to_loc.longitude);
 	var yards = meters * 1.09361;
 	$('#results').html(round(yards) + ' yards (' + round(meters) + ' meters)');
 }
