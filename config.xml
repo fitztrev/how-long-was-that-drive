@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.trevorfitzgerald.howlongwasthatdrive" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>How Long Was That Drive?</name>
+    <description>
+        A simple golf app to measure your shot distance
+    </description>
+    <author email="fitztrev@gmail.com" href="http://trevorfitzgerald.com">
+        Trevor Fitzgerald
+    </author>
+
+    <preference name="phonegap-version" value="3.3.0" />
+    <gap:platform name="android" />
+    <access origin="*" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+</widget>
